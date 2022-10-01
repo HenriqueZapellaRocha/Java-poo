@@ -7,14 +7,14 @@ public class Client {
     
 private String name;
 private String email;
-private LocalDateTime birthDate;
+private String birthDate;
 
 
 public Client() {
 }
 
 
-public Client(String name, String email, LocalDateTime birthDate) {
+public Client(String name, String email, String birthDate) {
     this.name = name;
     this.email = email;
     this.birthDate = birthDate;
@@ -41,12 +41,12 @@ public void setEmail(String email) {
 }
 
 
-public LocalDateTime getBirthDate() {
+public String getBirthDate() {
     return birthDate;
 }
 
 
-public void setBirthDate(LocalDateTime birthDate) {
+public void setBirthDate(String birthDate) {
     this.birthDate = birthDate;
 }
 

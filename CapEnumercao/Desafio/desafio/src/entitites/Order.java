@@ -11,17 +11,17 @@ private OrderStatus status;
 
 
 private Client client;
-
 List<OrderItem> orderitem = new ArrayList<>();
+
 
 public Order() {
 }
 
-public Order(LocalDateTime moment, OrderStatus status, Client client, List<OrderItem> orderitem) {
+public Order(LocalDateTime moment, OrderStatus status, Client client) {
     this.moment = moment;
     this.status = status;
     this.client = client;
-    this.orderitem = orderitem;
+    
 }
 
 public LocalDateTime getMoment() {
