@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.SortingFocusTraversalPolicy;
+
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class Program {
     String email = sc.nextLine();
     System.out.print("Birth date dd/mm/yyyy: ");
     String birthDate = sc.nextLine();
-    System.out.print("Enter order data: ");
+    System.out.println("Enter order status: ");
     String orderStatus = sc.nextLine();
 
     Order order = new Order(LocalDateTime.now(),OrderStatus.valueOf(orderStatus), new Client(name, email, birthDate));
@@ -62,8 +62,10 @@ public class Program {
         System.out.println("Client name: " + order.getClient().getName() + order.getClient().getEmail() + "-" + order.getClient().getBirthDate());
         System.out.println("Order item: ");
 
+        
+
         for(OrderItem c : listorder ) {
-            System.out.println(c.getProduct().getName() + "," + c.getQuantity() + c.getPrice());
+            System.out.println(c.getProduct().getName() + "," + c.getQuantity() + c.getPrice() + order.total());
 
         }
 
