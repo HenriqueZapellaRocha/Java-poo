@@ -18,9 +18,6 @@ public class Program {
         
     Scanner sc = new Scanner(System.in);
 
-
-    List<OrderItem> listorder = new ArrayList<>();
-
     System.out.println("Enter client data: ");
     System.out.print("Name: ");
     String name = sc.nextLine();
@@ -48,14 +45,18 @@ public class Program {
             System.out.print("Product price: ");
             Double price = sc.nextDouble();
             System.out.print("Quantity: ");
-            Integer quantity = sc.nextInt();
+            int quantity = sc.nextInt();
 
-            OrderItem orderItem = new OrderItem(quantity, price, new Product(name, price));
+            OrderItem orderItem = new OrderItem(quantity, new Product(name, price));
 
-            listorder.add(orderItem);
-
+          order.orderAdd(orderItem);
+     
+            System.out.println();
+            System.out.println(orderItem);
 
         }
+
+        
 
 
         System.out.println("Order summary: ");
@@ -65,12 +66,14 @@ public class Program {
 
         
 
-        for(OrderItem c : listorder ) {
-            System.out.println(c.getProduct().getName() + "," + c.getQuantity() + c.getPrice());
+        
+            System.out.print(.getProduct().getName() + " " + c.getProduct().getPrice() + " " + c.getQuantity());
 
-        }
+        
 
+        System.out.println();
         System.out.println(order.total());
+
 
 
 }

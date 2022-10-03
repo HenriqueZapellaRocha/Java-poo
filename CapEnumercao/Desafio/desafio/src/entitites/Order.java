@@ -10,8 +10,9 @@ private LocalDateTime moment;
 private OrderStatus status;
 
 
+
 private Client client;
-List<OrderItem> orderitem = new ArrayList<>();
+List<OrderItem> listOrder = new ArrayList<>();
 
 
 public Order() {
@@ -48,17 +49,20 @@ public void setClient(Client client) {
     this.client = client;
 }
 
-
-public List<OrderItem> getOrderitem() {
-    return orderitem;
+public void orderAdd( OrderItem orderItem) {
+listOrder.add(orderItem); 
 }
 
-public Double total() {
-  Double precoTotal = 0.0;
-    for (OrderItem order : orderitem) {
-        precoTotal += order.getPrice();
-    }
-    return precoTotal;
+
+public double total() {
+  double total = 0;
+
+  for(OrderItem c : listOrder ) {
+    total += c.getQuantity() * c.getProduct().getPrice();
+    return total;
+}
+
+return total;
 }
 
 
