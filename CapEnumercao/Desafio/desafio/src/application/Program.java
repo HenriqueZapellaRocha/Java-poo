@@ -43,6 +43,7 @@ public class Program {
 
             System.out.println("Enter #" + i + " data:");
             System.out.print("Product name: ");
+            sc.nextLine();
             name = sc.nextLine();
             System.out.print("Product price: ");
             Double price = sc.nextDouble();
@@ -65,9 +66,11 @@ public class Program {
         
 
         for(OrderItem c : listorder ) {
-            System.out.println(c.getProduct().getName() + "," + c.getQuantity() + c.getPrice() + order.total());
+            System.out.println(c.getProduct().getName() + "," + c.getQuantity() + c.getPrice());
 
         }
+
+        System.out.println(order.total());
 
 
 }
