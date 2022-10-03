@@ -7,6 +7,9 @@ import entitites.nums.OrderStatus;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import javax.swing.SortingFocusTraversalPolicy;
+
 import java.util.List;
 
 
@@ -55,8 +58,14 @@ public class Program {
 
 
         System.out.println("Order summary: ");
-        
+        System.out.println("Order date: "+ order.getMoment());
+        System.out.println("Client name: " + order.getClient().getName() + order.getClient().getEmail() + "-" + order.getClient().getBirthDate());
+        System.out.println("Order item: ");
 
+        for(OrderItem c : listorder ) {
+            System.out.println(c.getProduct().getName() + "," + c.getQuantity() + c.getPrice());
+
+        }
 
 
 }
