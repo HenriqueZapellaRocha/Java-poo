@@ -35,5 +35,12 @@ public void setProduct(Product product) {
 
 
 
+public String toString() {
+    return product.getName() + ", " + product.getPrice() + ", " + quantity + "\n";
+}
+
+
+
+
 
 }

@@ -5,12 +5,11 @@ import entitites.OrderItem;
 import entitites.Product;
 import entitites.nums.OrderStatus;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
 
-import java.util.List;
+
 
 
 public class Program {
@@ -60,20 +59,14 @@ public class Program {
 
 
         System.out.println("Order summary: ");
+
         System.out.println("Order date: "+ order.getMoment());
-        System.out.println("Client name: " + order.getClient().getName() + order.getClient().getEmail() + "-" + order.getClient().getBirthDate());
-        System.out.println("Order item: ");
+        System.out.println("Order status: " + order.getStatus());
+        System.out.println("Client: " + order.getClient().getName() + " - " + order.getClient().getEmail() + " - " + order.getClient().getBirthDate());
 
-        
-
-        
-            System.out.print(.getProduct().getName() + " " + c.getProduct().getPrice() + " " + c.getQuantity());
-
-        
-
-        System.out.println();
+        System.out.println("Order items: ");
+        System.out.println(order.getListOrder() + ": " + order.total());
         System.out.println(order.total());
-
 
 
 }

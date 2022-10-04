@@ -54,16 +54,28 @@ listOrder.add(orderItem);
 }
 
 
+public List<OrderItem> getListOrder() {
+    return listOrder;
+}
+
 public double total() {
   double total = 0;
 
   for(OrderItem c : listOrder ) {
-    total += c.getQuantity() * c.getProduct().getPrice();
-    return total;
+    total = total + (c.getQuantity() * c.getProduct().getPrice());
+    
 }
 
 return total;
 }
+
+
+
+
+
+
+
+
 
 
 
