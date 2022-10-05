@@ -5,6 +5,8 @@ import entitites.OrderItem;
 import entitites.Product;
 import entitites.nums.OrderStatus;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Scanner;
 
 
@@ -17,6 +19,10 @@ public class Program {
         
     Scanner sc = new Scanner(System.in);
 
+
+
+    DateTimeFormatter formatter =  DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
     System.out.println("Enter client data: ");
     System.out.print("Name: ");
     String name = sc.nextLine();
@@ -26,6 +32,7 @@ public class Program {
     String birthDate = sc.nextLine();
     System.out.println("Enter order status: ");
     String orderStatus = sc.nextLine();
+
 
     Order order = new Order(LocalDateTime.now(),OrderStatus.valueOf(orderStatus), new Client(name, email, birthDate));
     
@@ -60,7 +67,7 @@ public class Program {
 
         System.out.println("Order summary: ");
 
-        System.out.println("Order date: "+ order.getMoment());
+        System.out.println("Order date: "+ order.getMoment().format(formatter));
         System.out.println("Order status: " + order.getStatus());
         System.out.println("Client: " + order.getClient().getName() + " - " + order.getClient().getEmail() + " - " + order.getClient().getBirthDate());
 
