@@ -22,7 +22,7 @@ public class Juridica extends Contribuinte {
 
     @Override
     public String toString() {
-        return "Juridica [numeroDeFuncionarios=" + numeroDeFuncionarios + "]";
+        return getNome() + ", " + tax();
     }
 
     

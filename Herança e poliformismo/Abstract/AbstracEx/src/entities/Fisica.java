@@ -31,9 +31,10 @@ public class Fisica extends Contribuinte {
 
     }
 
+    
     @Override
     public String toString() {
-        return "Fisica [gastosComSaude=" + gastosComSaude + "]";
+        return getNome() + ", " + tax();
     }
     
 

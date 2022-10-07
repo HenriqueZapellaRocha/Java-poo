@@ -3,7 +3,6 @@ import java.util.Scanner;
 import entities.Contribuinte;
 import entities.Fisica;
 import entities.Juridica;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,13 +34,13 @@ public class Program {
         contribuinte.add(new Fisica(name, rendaAnual, gastoComSaude));
         } else {
            Integer numeroDeFuncionarios = sc.nextInt();
-           contribuinte.add(new Juridica(name, rendaAnual, numeroDeFuncionarios);
+           contribuinte.add(new Juridica(name, rendaAnual, numeroDeFuncionarios));
             
            
         }
 
         for (Contribuinte contribuint : contribuinte) {
-            
+            System.out.println(contribuint.toString());
         }
 
     }

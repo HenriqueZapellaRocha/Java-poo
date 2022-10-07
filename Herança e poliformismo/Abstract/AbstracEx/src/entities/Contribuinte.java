@@ -31,9 +31,9 @@ public abstract class  Contribuinte {
     
     public abstract Double tax();
 
-    @Override
+
     public String toString() {
-        return "Contribuinte [nome=" + nome + ", rendaAnual=" + rendaAnual + "]";
+        return getNome() + ", " + tax();
     }
     
     
