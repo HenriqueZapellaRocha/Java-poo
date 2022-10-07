@@ -43,11 +43,14 @@ public class Program {
            
         }
 
-        System.out.println("Tzes paid: ");
-        for (Contribuinte contribuint : contribuinte) {
-            System.out.println(contribuint.toString());
-        }
+       
 
+    }
+
+
+    System.out.println("Taxes paid: ");
+    for (Contribuinte contribuint : contribuinte) {
+        System.out.println(contribuint.toString());
     }
 
 
